@@ -24,6 +24,7 @@
 
 package io.jhnc.jenkins.plugins.pipeline.model;
 
+import edu.umd.cs.findbugs.annotations.CheckForNull;
 import edu.umd.cs.findbugs.annotations.NonNull;
 import hudson.Extension;
 import hudson.model.BooleanParameterDefinition;
@@ -35,7 +36,7 @@ public class HiddenBooleanParameterDefinition extends BooleanParameterDefinition
 
 
     @DataBoundConstructor
-    public HiddenBooleanParameterDefinition(String name, boolean defaultValue, String description) {
+    public HiddenBooleanParameterDefinition(@NonNull String name, boolean defaultValue, @CheckForNull String description) {
         super(name, defaultValue, description);
     }
 

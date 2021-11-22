@@ -24,6 +24,7 @@
 
 package io.jhnc.jenkins.plugins.pipeline.model;
 
+import edu.umd.cs.findbugs.annotations.CheckForNull;
 import edu.umd.cs.findbugs.annotations.NonNull;
 import hudson.Extension;
 import hudson.model.StringParameterDefinition;
@@ -36,7 +37,7 @@ public class HiddenTextParameterDefinition extends TextParameterDefinition {
 
 
     @DataBoundConstructor
-    public HiddenTextParameterDefinition(String name, String defaultValue, String description) {
+    public HiddenTextParameterDefinition(@NonNull String name, @CheckForNull String defaultValue, @CheckForNull String description) {
         super(name, defaultValue, description);
     }
 

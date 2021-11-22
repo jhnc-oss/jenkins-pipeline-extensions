@@ -24,6 +24,7 @@
 
 package io.jhnc.jenkins.plugins.pipeline.model;
 
+import edu.umd.cs.findbugs.annotations.CheckForNull;
 import edu.umd.cs.findbugs.annotations.NonNull;
 import hudson.Extension;
 import hudson.model.ChoiceParameterDefinition;
@@ -35,11 +36,11 @@ public class HiddenChoiceParameterDefinition extends ChoiceParameterDefinition {
 
 
     @DataBoundConstructor
-    public HiddenChoiceParameterDefinition(String name, String choices, String description) {
+    public HiddenChoiceParameterDefinition(@NonNull String name, @NonNull String choices, @CheckForNull String description) {
         super(name, choices, description);
     }
 
-    public HiddenChoiceParameterDefinition(String name, String[] choices, String description) {
+    public HiddenChoiceParameterDefinition(@NonNull String name, @NonNull String[] choices, @CheckForNull String description) {
         super(name, choices, description);
     }
 

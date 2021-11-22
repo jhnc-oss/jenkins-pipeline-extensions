@@ -65,7 +65,7 @@ public class FailStep extends Step {
         @SuppressFBWarnings(value = "SE_TRANSIENT_FIELD_NOT_RESTORED", justification = "Only used when starting.")
         private transient final String message;
 
-        public Execution(@NonNull StepContext context, String message) {
+        public Execution(@NonNull StepContext context, @NonNull String message) {
             super(context);
             this.message = message;
         }

@@ -73,7 +73,7 @@ public class CheckStep extends Step {
         @SuppressFBWarnings(value = "SE_TRANSIENT_FIELD_NOT_RESTORED", justification = "Only used when starting.")
         private transient final String message;
 
-        public Execution(@NonNull StepContext context, boolean condition, String message) {
+        public Execution(@NonNull StepContext context, boolean condition, @NonNull String message) {
             super(context);
             this.condition = condition;
             this.message = message;
