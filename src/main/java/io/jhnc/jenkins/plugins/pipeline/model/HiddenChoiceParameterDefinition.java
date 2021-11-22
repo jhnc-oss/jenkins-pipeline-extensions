@@ -50,7 +50,7 @@ public class HiddenChoiceParameterDefinition extends ChoiceParameterDefinition {
         @NonNull
         @Override
         public String getDisplayName() {
-            return "Hidden Choice Parameter";
+            return Messages.HiddenChoiceParameterDefinition_displayName();
         }
     }
 }

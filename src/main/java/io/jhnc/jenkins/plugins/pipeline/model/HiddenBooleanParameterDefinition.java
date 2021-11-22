@@ -46,7 +46,7 @@ public class HiddenBooleanParameterDefinition extends BooleanParameterDefinition
         @NonNull
         @Override
         public String getDisplayName() {
-            return "Hidden Boolean Parameter";
+            return Messages.HiddenBooleanParameterDefinition_displayName();
         }
     }
 }

@@ -89,7 +89,7 @@ public class FailStep extends Step {
         @NonNull
         @Override
         public String getDisplayName() {
-            return "Fail";
+            return Messages.FailStep_displayName();
         }
 
         @Override

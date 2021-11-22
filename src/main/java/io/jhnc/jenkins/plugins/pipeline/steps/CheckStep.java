@@ -96,7 +96,7 @@ public class CheckStep extends Step {
         @NonNull
         @Override
         public String getDisplayName() {
-            return "Check Condition";
+            return Messages.CheckStep_displayName();
         }
 
         @Override

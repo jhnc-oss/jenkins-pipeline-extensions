@@ -47,7 +47,7 @@ public class HiddenTextParameterDefinition extends TextParameterDefinition {
         @NonNull
         @Override
         public String getDisplayName() {
-            return "Hidden Text Parameter";
+            return Messages.HiddenTextParameterDefinition_displayName();
         }
     }
 }

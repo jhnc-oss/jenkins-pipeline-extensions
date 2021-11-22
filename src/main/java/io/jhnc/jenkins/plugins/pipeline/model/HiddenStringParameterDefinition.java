@@ -46,7 +46,7 @@ public class HiddenStringParameterDefinition extends StringParameterDefinition {
         @NonNull
         @Override
         public String getDisplayName() {
-            return "Hidden String Parameter";
+            return Messages.HiddenStringParameterDefinition_displayName();
         }
     }
 }

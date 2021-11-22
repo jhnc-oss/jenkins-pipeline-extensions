@@ -25,7 +25,7 @@ SOFTWARE.
     <j:set var="escapeEntryTitleAndDescription" value="false"/>
 
     <l:hasPermission permission="${app.ADMINISTER}">
-        <f:entry title="(hidden) ${h.escape(it.name)}" description="${it.formattedDescription}">
+        <f:entry title="(${%index.hiddenPrefix}) ${h.escape(it.name)}" description="${it.formattedDescription}">
             <div name="parameter">
                 <input type="hidden" name="name" value="${it.name}"/>
                 <f:textarea name="value" value="${it.defaultValue}"/>

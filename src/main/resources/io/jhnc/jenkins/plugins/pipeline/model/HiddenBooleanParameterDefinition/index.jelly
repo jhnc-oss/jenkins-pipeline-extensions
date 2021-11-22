@@ -25,7 +25,7 @@ SOFTWARE.
     <j:set var="escapeEntryTitleAndDescription" value="false"/>
 
     <l:hasPermission permission="${app.ADMINISTER}">
-        <f:entry description="${it.formattedDescription}" title="(hidden)">
+        <f:entry description="${it.formattedDescription}" title="(${%index.hiddenPrefix})">
             <div name="parameter">
                 <input type="hidden" name="name" value="${it.name}"/>
                 <f:checkbox title="${h.escape(it.name)}" name="value" checked="${it.defaultValue}"/>
