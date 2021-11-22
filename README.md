@@ -1,5 +1,7 @@
 # Jenkins Pipeline Extensions
 
+Additional Pipeline features which aren't part of other plugins.
+
 ## Steps
 
 ### Fail
