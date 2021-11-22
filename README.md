@@ -1,5 +1,10 @@
 # Jenkins Pipeline Extensions
 
+[![ci](https://github.com/jhnc-oss/jenkins-pipeline-extensions/actions/workflows/ci.yml/badge.svg)](https://github.com/jhnc-oss/jenkins-pipeline-extensions/actions/workflows/ci.yml)
+[![GitHub release](https://img.shields.io/github/release/jhnc-oss/jenkins-pipeline-extensions.svg)](https://github.com/jhnc-oss/jenkins-pipeline-extensions/releases)
+[![License](https://img.shields.io/badge/license-MIT-yellow.svg)](LICENSE)
+![Java](https://img.shields.io/badge/java-1.8-green.svg)
+
 Additional Pipeline features which aren't part of other plugins.
 
 ## Steps
