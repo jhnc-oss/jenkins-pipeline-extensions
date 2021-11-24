@@ -28,6 +28,7 @@ import hudson.model.Result;
 import io.jhnc.jenkins.plugins.pipeline.JenkinsJUnitAdapter;
 import io.jhnc.jenkins.plugins.pipeline.WorkflowTestRunner;
 import org.jenkinsci.plugins.workflow.job.WorkflowRun;
+import org.jenkinsci.plugins.workflow.steps.StepConfigTester;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -46,6 +47,13 @@ public class FailStepTest {
         final WorkflowRun build = WorkflowTestRunner.executeScript(r, info.getDisplayName(), "fail(null)");
         r.assertBuildStatus(Result.FAILURE, build);
         r.assertLogContains("< No Message (null) >", build);
+    }
+
+    @Test
+    public void configRoundTrip(JenkinsJUnitAdapter.JenkinsRule r) throws Exception {
+        final FailStep step = new FailStep("y");
+        final FailStep step2 = new StepConfigTester(r).configRoundTrip(step);
+        r.assertEqualDataBoundBeans(step, step2);
     }
 
 }
