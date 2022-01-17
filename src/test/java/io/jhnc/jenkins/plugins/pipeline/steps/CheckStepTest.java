@@ -25,19 +25,19 @@
 package io.jhnc.jenkins.plugins.pipeline.steps;
 
 import hudson.model.Result;
-import io.jhnc.jenkins.plugins.pipeline.JenkinsJUnitAdapter;
 import io.jhnc.jenkins.plugins.pipeline.WorkflowTestRunner;
 import org.jenkinsci.plugins.workflow.job.WorkflowRun;
 import org.jenkinsci.plugins.workflow.steps.StepConfigTester;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.jvnet.hudson.test.JenkinsRule;
+import org.jvnet.hudson.test.junit.jupiter.EnableJenkins;
 
-@ExtendWith(JenkinsJUnitAdapter.JenkinsParameterResolver.class)
+@EnableJenkins
 public class CheckStepTest {
 
     @Test
-    public void checkStepFailsOnFalseCondition(TestInfo info, JenkinsJUnitAdapter.JenkinsRule r) throws Exception {
+    public void checkStepFailsOnFalseCondition(TestInfo info, JenkinsRule r) throws Exception {
         final WorkflowRun build = WorkflowTestRunner.executeScript(r, info.getDisplayName(),
                 "check(condition: false, message: 'should fail here')");
         r.assertBuildStatus(Result.FAILURE, build);
@@ -45,7 +45,7 @@ public class CheckStepTest {
     }
 
     @Test
-    public void checkStepDoesNotFailOnTrueCondition(TestInfo info, JenkinsJUnitAdapter.JenkinsRule r) throws Exception {
+    public void checkStepDoesNotFailOnTrueCondition(TestInfo info, JenkinsRule r) throws Exception {
         final WorkflowRun build = WorkflowTestRunner.executeScript(r, info.getDisplayName(),
                 "check(condition: true, message: 'should not fail here')");
         r.assertBuildStatus(Result.SUCCESS, build);
@@ -53,14 +53,14 @@ public class CheckStepTest {
     }
 
     @Test
-    public void checkStepIsSafeToNullMessage(TestInfo info, JenkinsJUnitAdapter.JenkinsRule r) throws Exception {
+    public void checkStepIsSafeToNullMessage(TestInfo info, JenkinsRule r) throws Exception {
         final WorkflowRun build = WorkflowTestRunner.executeScript(r, info.getDisplayName(), "check(condition: false, message: null)");
         r.assertBuildStatus(Result.FAILURE, build);
         r.assertLogContains("< No Message (null) >", build);
     }
 
     @Test
-    public void configRoundTrip(JenkinsJUnitAdapter.JenkinsRule r) throws Exception {
+    public void configRoundTrip(JenkinsRule r) throws Exception {
         final CheckStep step = new CheckStep(true, "x");
         final CheckStep step2 = new StepConfigTester(r).configRoundTrip(step);
         r.assertEqualDataBoundBeans(step, step2);
