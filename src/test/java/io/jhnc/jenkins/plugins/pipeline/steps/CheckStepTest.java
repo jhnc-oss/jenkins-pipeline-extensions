@@ -26,12 +26,12 @@ package io.jhnc.jenkins.plugins.pipeline.steps;
 
 import hudson.model.Result;
 import io.jhnc.jenkins.plugins.pipeline.WorkflowTestRunner;
+import io.jhnc.jenkins.plugins.test.EnableJenkins;
 import org.jenkinsci.plugins.workflow.job.WorkflowRun;
 import org.jenkinsci.plugins.workflow.steps.StepConfigTester;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 import org.jvnet.hudson.test.JenkinsRule;
-import org.jvnet.hudson.test.junit.jupiter.EnableJenkins;
 
 @EnableJenkins
 public class CheckStepTest {
