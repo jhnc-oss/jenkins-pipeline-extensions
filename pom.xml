@@ -14,7 +14,7 @@
     <packaging>hpi</packaging>
 
     <properties>
-        <jenkins.version>2.303.1</jenkins.version>
+        <jenkins.version>2.332</jenkins.version> <!-- TODO: Set final .1 LTS version -->
         <java.level>8</java.level>
 
         <junit.jupiter.version>5.8.2</junit.jupiter.version>
@@ -95,8 +95,8 @@
         <dependencies>
             <dependency>
                 <groupId>io.jenkins.tools.bom</groupId>
-                <artifactId>bom-2.303.x</artifactId>
-                <version>1195.v33041c1f1b_b_2</version>
+                <artifactId>bom-2.332.x</artifactId>
+                <version>1181.v04b_21d4b_0d6c</version>
                 <scope>import</scope>
                 <type>pom</type>
             </dependency>
