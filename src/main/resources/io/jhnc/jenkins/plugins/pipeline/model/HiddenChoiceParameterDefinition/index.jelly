@@ -26,7 +26,7 @@ SOFTWARE.
 <j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define"
          xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form"
          xmlns:i="jelly:fmt" xmlns:p="/lib/hudson/project">
-    <j:set var="escapeEntryTitleAndDescription" value="false"/>
+    <j:set var="escapeEntryTitleAndDescription" value="true"/>
 
     <l:hasPermission permission="${app.ADMINISTER}">
         <f:entry title="(${%index.hiddenPrefix}) ${h.escape(it.name)}" description="${it.formattedDescription}">
