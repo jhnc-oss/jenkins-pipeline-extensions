@@ -20,7 +20,7 @@
     </properties>
 
     <name>Pipeline Extensions</name>
-    <description>Extensions for Pipelines.</description>
+
     <licenses>
         <license>
             <name>MIT License</name>
