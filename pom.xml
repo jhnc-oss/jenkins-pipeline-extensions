@@ -15,8 +15,6 @@
 
     <properties>
         <jenkins.version>2.346.1</jenkins.version>
-
-        <junit.jupiter.version>5.9.1</junit.jupiter.version>
     </properties>
 
     <name>Pipeline Extensions</name>
@@ -112,13 +110,11 @@
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
-            <version>${junit.jupiter.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.junit.vintage</groupId>
             <artifactId>junit-vintage-engine</artifactId>
-            <version>${junit.jupiter.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
