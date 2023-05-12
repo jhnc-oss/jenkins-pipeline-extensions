@@ -144,14 +144,6 @@
             <classifier>tests</classifier>
             <scope>test</scope>
         </dependency>
-
-        <!-- Upper bound dependency -->
-        <dependency>
-            <groupId>com.google.errorprone</groupId>
-            <artifactId>error_prone_annotations</artifactId>
-            <version>2.19.1</version>
-            <scope>test</scope>
-        </dependency>
     </dependencies>
 
     <repositories>
