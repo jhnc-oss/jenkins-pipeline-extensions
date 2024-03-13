@@ -40,3 +40,7 @@ Hidden parameter types which aren't available for user input. Supported types:
 - hiddenChoice
 
 Users with permission `app/administer` have access to those parameter types and may change it.
+
+## CVE Summary parser
+
+Extension to [Warnings NG](https://github.com/jenkinsci/warnings-ng-plugin) which supports parsing of *CVE summary* JSON files.
