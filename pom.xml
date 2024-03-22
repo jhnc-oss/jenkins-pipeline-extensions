@@ -110,6 +110,12 @@
             <artifactId>warnings-ng</artifactId>
             <version>10.7.0</version>
         </dependency>
+        <!-- Upper bound dependency -->
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20240303</version>
+        </dependency>
 
         <!-- Test dependencies -->
         <dependency>
