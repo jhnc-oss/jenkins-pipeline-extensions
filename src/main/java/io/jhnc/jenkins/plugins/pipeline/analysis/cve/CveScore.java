@@ -40,7 +40,7 @@ public class CveScore {
     @NonNull
     public Severity toSeverity() {
         if (!scoreV3.equals("0.0")) {
-            final float v3 = Float.parseFloat(scoreV3);
+            final float v3 = toFloat(scoreV3);
 
             if (inRange(v3, 0.1f, 3.9f)) {
                 return Severity.WARNING_LOW;
@@ -52,7 +52,7 @@ public class CveScore {
                 return Severity.ERROR;
             }
         } else {
-            final float v2 = Float.parseFloat(scoreV2);
+            final float v2 = toFloat(scoreV2);
             if (inRange(v2, 0.0f, 3.9f)) {
                 return Severity.WARNING_LOW;
             } else if (inRange(v2, 4.0f, 6.9f)) {
@@ -75,7 +75,7 @@ public class CveScore {
 
     private String sanitize(String value) {
         String newValue = value.trim();
-        if (newValue.isEmpty() || !inRange(Float.parseFloat(newValue), 0.0f, 10.0f)) {
+        if (newValue.isEmpty() || !inRange(toFloat(newValue), 0.0f, 10.0f)) {
             throw new IllegalArgumentException("Invalid CVSS: '" + value + "'");
         }
         return newValue;
@@ -83,5 +83,13 @@ public class CveScore {
 
     private boolean inRange(float value, float min, float max) {
         return (value >= min) && (value <= max);
+    }
+
+    private float toFloat(String value) {
+        try {
+            return Float.parseFloat(value);
+        } catch (NumberFormatException ex) {
+            throw new IllegalArgumentException("Invalid CVSS value: '" + value + "'");
+        }
     }
 }
