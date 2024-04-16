@@ -108,7 +108,7 @@
         <dependency>
             <groupId>io.jenkins.plugins</groupId>
             <artifactId>warnings-ng</artifactId>
-            <version>11.2.2</version>
+            <version>11.3.0</version>
         </dependency>
         <!-- Upper bound dependency -->
         <dependency>
