@@ -109,17 +109,6 @@
             <groupId>io.jenkins.plugins</groupId>
             <artifactId>warnings-ng</artifactId>
         </dependency>
-        <!-- Upper bound dependency -->
-        <dependency>
-            <groupId>org.json</groupId>
-            <artifactId>json</artifactId>
-            <version>20240303</version>
-        </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>2.0.13</version>
-        </dependency>
 
         <!-- Test dependencies -->
         <dependency>
