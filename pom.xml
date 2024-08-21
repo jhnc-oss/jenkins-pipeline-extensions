@@ -14,7 +14,7 @@
     <packaging>hpi</packaging>
 
     <properties>
-        <jenkins.version>2.426.3</jenkins.version>
+        <jenkins.version>2.462.1</jenkins.version>
     </properties>
 
     <name>Pipeline Extensions</name>
@@ -92,8 +92,8 @@
         <dependencies>
             <dependency>
                 <groupId>io.jenkins.tools.bom</groupId>
-                <artifactId>bom-2.426.x</artifactId>
-                <version>3193.v330d8248d39e</version>
+                <artifactId>bom-2.462.x</artifactId>
+                <version>3276.vcd71db_867fb_2</version>
                 <scope>import</scope>
                 <type>pom</type>
             </dependency>
