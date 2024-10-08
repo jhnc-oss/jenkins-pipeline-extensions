@@ -29,6 +29,10 @@ import edu.hm.hafner.analysis.Report;
 import edu.hm.hafner.analysis.parser.JsonIssueParser;
 import org.json.JSONObject;
 
+/**
+ * @deprecated Replaced by {@code yoctoScanner()} of <i>warnings-ng</i>; will be removed in v0.6.0
+ */
+@Deprecated(forRemoval = true, since = "0.5.2")
 public class CveScanParser extends JsonIssueParser {
     @Override
     protected void parseJsonObject(Report report, JSONObject jsonReport, IssueBuilder issueBuilder) {

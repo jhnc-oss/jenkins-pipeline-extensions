@@ -27,6 +27,10 @@ package io.jhnc.jenkins.plugins.pipeline.analysis.cve;
 import edu.hm.hafner.analysis.Severity;
 import edu.umd.cs.findbugs.annotations.NonNull;
 
+/**
+ * @deprecated Replaced by {@code yoctoScanner()} of <i>warnings-ng</i>; will be removed in v0.6.0
+ */
+@Deprecated(forRemoval = true, since = "0.5.2")
 public class CveScore {
     private final String scoreV3;
     private final String scoreV2;

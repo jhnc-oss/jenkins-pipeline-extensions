@@ -30,6 +30,10 @@ import hudson.Extension;
 import io.jenkins.plugins.analysis.core.model.ReportScanningTool;
 import org.kohsuke.stapler.DataBoundConstructor;
 
+/**
+ * @deprecated Replaced by {@code yoctoScanner()} of <i>warnings-ng</i>; will be removed in v0.6.0
+ */
+@Deprecated(forRemoval = true, since = "0.5.2")
 public class CveScanner extends ReportScanningTool {
     static final String ID = "cve-scanner";
 
