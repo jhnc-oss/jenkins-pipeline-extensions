@@ -43,4 +43,8 @@ Users with permission `app/administer` have access to those parameter types and 
 
 ## CVE Summary parser
 
+### Deprecation
+
+*The CVE summary parser is deprecated and will be removed in v0.6.0; it's available as `yoctoScanner()` in [Warnings NG](https://github.com/jenkinsci/warnings-ng-plugin) now.*
+
 Extension to [Warnings NG](https://github.com/jenkinsci/warnings-ng-plugin) which supports parsing of *CVE summary* JSON files.
