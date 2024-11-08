@@ -32,7 +32,10 @@ import hudson.model.TextParameterDefinition;
 import org.jenkinsci.Symbol;
 import org.kohsuke.stapler.DataBoundConstructor;
 
+import java.io.Serial;
+
 public class HiddenTextParameterDefinition extends TextParameterDefinition {
+    @Serial
     private static final long serialVersionUID = 1L;
 
 
