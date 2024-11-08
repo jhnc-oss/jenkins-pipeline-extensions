@@ -38,6 +38,7 @@ import org.jenkinsci.plugins.workflow.steps.StepExecution;
 import org.jenkinsci.plugins.workflow.steps.SynchronousStepExecution;
 import org.kohsuke.stapler.DataBoundConstructor;
 
+import java.io.Serial;
 import java.util.Collections;
 import java.util.Set;
 
@@ -67,6 +68,7 @@ public class CheckStep extends Step {
 
 
     public static class Execution extends SynchronousStepExecution<Void> {
+        @Serial
         private static final long serialVersionUID = 1L;
         @SuppressFBWarnings(value = "SE_TRANSIENT_FIELD_NOT_RESTORED", justification = "Only used when starting.")
         private transient final boolean condition;

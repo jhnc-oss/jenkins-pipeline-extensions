@@ -31,7 +31,10 @@ import hudson.model.StringParameterDefinition;
 import org.jenkinsci.Symbol;
 import org.kohsuke.stapler.DataBoundConstructor;
 
+import java.io.Serial;
+
 public class HiddenStringParameterDefinition extends StringParameterDefinition {
+    @Serial
     private static final long serialVersionUID = 1L;
 
 
